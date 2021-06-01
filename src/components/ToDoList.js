@@ -4,7 +4,6 @@ import Todo from './ToDo';
 
 const ToDoList = ({ tasks, match, onToggleCompleted }) => {
   let filteredTasks;
-  console.log(match.params);
 
   switch (match.params.filter) {
     case 'completed':
