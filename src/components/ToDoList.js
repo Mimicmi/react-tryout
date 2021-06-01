@@ -2,7 +2,7 @@ import React from 'react';
 import Todo from './ToDo';
 
 
-const ToDoList = ({ tasks, match }) => {
+const ToDoList = ({ tasks, match, onToggleCompleted }) => {
   let filteredTasks;
   console.log(match.params);
 
@@ -26,7 +26,7 @@ const ToDoList = ({ tasks, match }) => {
         <h1 className="m-3">My to-do-list app</h1>
         <ul className="list-group m-3">
           {
-            filteredTasks.map((task) => <Todo task={task} key={task.id} />)
+            filteredTasks.map((task) => <Todo task={task} key={task.id} onToggleCompleted={onToggleCompleted} />)
           }
         </ul>
       </React.Fragment>
